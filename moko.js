@@ -220,3 +220,28 @@ document.getElementById('generate').addEventListener('click', function() {
         alert("Failed to copy: " + error);
     });
 });
+    function antiParser(escapedString) {
+        return escapedString
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&')
+            .replace(/&quot;/g, '"')
+            .replace(/&#039;/g, "'");  // Handle single quotes as well
+    }
+
+    function convertEscapedHTML() {
+        const input = document.getElementById('inputArea').value;
+        const output = antiParser(input);
+        document.getElementById('outputArea').textContent = output; // Display result in output area
+    }
+
+    function copyToClipboard() {
+        const output = document.getElementById('outputArea').textContent;
+        const tempTextArea = document.createElement('textarea');
+        tempTextArea.value = output;
+        document.body.appendChild(tempTextArea);
+        tempTextArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempTextArea);
+        alert("Copied to clipboard!"); // Optional: alert to notify the user
+    }
