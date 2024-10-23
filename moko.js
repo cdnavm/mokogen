@@ -146,65 +146,101 @@ document.getElementById('generate').addEventListener('click', function() {
                 `;
 
                 let generatedPost = `
-                    <div class="rcimg-cover">
-                        <button id="toMiddle"><div class="play-video"></div></button>
-                        <span class="bigcover"></span>
-                    </div>
-                    <div class="goomsite-movie">
-                        <div class="goomsite-left">
-                            <a href="${posterUrl}" style="display: block; text-align: center;">
-                                <img alt="${title}" border="0" height="320" src="${posterUrl}" />
-                            </a>
-                        </div>
-                        <div class="goomsite-right">
-                            <h1>${title}</h1>
-						<fieldset class="rating">
-                            <input id="star5" name="rating" type="radio" value="5" />
-                            <label class="full"></label>
-                            <input checked="" id="star4" name="rating" type="radio" value="4" />
-                            <label class="full"></label>
-                            <input id="star3" name="rating" type="radio" value="3" />
-                            <label class="full"></label>
-                            <input id="star2" name="rating" type="radio" value="2" />
-                            <label class="full"></label>
-                            <input id="star1" name="rating" type="radio" value="1" />
-                            <label class="full"></label>
-                                <span class="likes">Rating ${rating}</span>
-                            </fieldset>
-                            <div class="m-description">
-                                <span class="m-des">Type: Series</span>
-                                <span class="m-des">Duration: ${duration} min</span>
-                                <span class="m-des">Quality: HD</span>
-                                <span class="m-des">Genre: ${genres}</span>
-                                <span class="m-des">Director: ${director}</span>
-                                <span class="m-des">Cast: ${cast}</span>
-                                <span class="m-des">Upload By Admin</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="postmovie">
-                        <i class="fas fa-fire"></i><b> Description :</b>
-                        <p>${description}</p>
-                        <div class="alert info">
-                            <b>Notice:</b> Our Website does not own any copyright documents, if Our Website has violated any laws, please let me know, and I will remove the series.
-                        </div>
-                        Thank you for support
-                        <a href="/"> Mokoehbi</a>
-                    </div>
-                  <div class="border-video">
-                  <div class="show-video respon-vdo">
-                    <a class="button-eps" data-eps="You are watching the episode 1" data-id="0">
-                      <div class="play-video"></div>
-                    </a>
-                    <img class="mybackgroundx" />
-                  </div>
+                    <!-- BADGE -->
+		    
+Add_Badge_Here
 
-                  <span class="video-title">Click Your Episode</span>
+<!-- BADGE -->
 
-                  <div class="tab-eps video-epsx">
-                    ${episodeScript} <!-- This part should be dynamically generated -->
-                  </div>
-                </div>
+<div class="rcimg-cover">
+  <button id="toMiddle">
+    <div class="play-video"></div>
+  </button>
+  <span class="bigcover"> </span>
+</div>
+<div class="goomsite-movie">
+  <div class="goomsite-left">
+    <div class="rcimg">
+      <div class="rec-image">
+        <div class="separator" style="clear: both;">
+        
+          <!--Add Your Poster Image Here-->
+
+          <div class="separator" style="clear: both;">
+          <a href="${posterUrl}" style="display: block; text-align: center;">
+      <img alt="${title}" border="0" height="320" src="${posterUrl}" />
+          </a>
+          </div>
+          <!--End Add Your Poster Image Here-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="goomsite-right">
+  
+    <!--Your Series Title Here-->
+
+    <h1>${title}</h1>
+
+    <!--End Your Series Title Here-->
+    
+    <fieldset class="rating">
+      <input id="star5" name="rating" type="radio" value="5" />
+      <label class="full"></label>
+      <input checked="" id="star4" name="rating" type="radio" value="4" />
+      <label class="half"></label>
+      <input id="star3" name="rating" type="radio" value="3" />
+      <label class="full"></label>
+      <input id="star2" name="rating" type="radio" value="2" />
+      <label class="full"></label>
+      <input id="star1" name="rating" type="radio" value="1" />
+      <label class="full"></label>
+      <span class="likes">Rating ${rating}</span> <!-- Rating -->
+    </fieldset>
+
+    <!--Add Your Series Details Here-->
+
+    <div class="m-description">
+      <span class="m-des">Type: Series</span>
+      <span class="m-des">Duration: ${duration} min</span>
+      <span class="m-des">Quality: HD</span>
+       <span class="m-des">Release: Add_Series_Release_Here</span>
+      <span class="m-des">Genre: Add_Series_Genre_Here</span>
+      <span class="m-des">Director: ${director}</span>
+      <span class="m-des">Starring: ${cast}</span>
+      <span class="m-des">Upload By Admin</span>
+      <!--End Your Series Details Here-->
+    </div>
+  </div>
+</div>
+<div class="postmovie">
+  <i class="fas fa-fire"></i><b> Description :</b>
+
+  <!--Series Description Here-->
+  
+  <p>Add_Series_Description_Here</p>
+  <p>${description}</p>
+  <div class="alert info">
+    <b>Notice:</b>
+    Our Website do not own any copyright documents, if Our Website have violated any
+    laws please let me know i will remove that movies.
+  </div>
+  Thank you for support
+  <a href="mokoehbi.blogspot.com"> Mokoehbi</a> <!-- Change "Mokoehbi" to your Website Name -->
+  <p></p>
+</div>
+<div class="border-video">
+  <div class="show-video respon-vdo">
+    <a class="button-eps" data-eps="You are watching the episode 1" data-id="0">
+      <div class="play-video"></div>
+    </a>
+    <img class="mybackgroundx" />
+  </div>
+  <span class="video-title">Click Your Episode</span>
+  <div class="tab-eps video-epsx">
+    ${episodeScript} <!-- Series Handler -->
+  </div>
+</div>
                 `;
                 document.getElementById('output').innerText = generatedPost;
             });
