@@ -132,13 +132,13 @@ document.getElementById('generate').addEventListener('click', function() {
                           laws please let me know i will remove that movies.
                        </div>
                        Thank you for support
-                       <a href="/"> Our Website</a>
+                       <a href="mokoehbi.blogspot.com"> Mokoehbi</a>
                        <p></p>
                     </div>
                     <!-- Use Embedded movie here ! -->
                     <!--Stream Player by Twinkling Watermelon-->
                     <div class="box_stream">
-                       <iframe style="height: 316px;width: 100%;" src="${watchLink}"></iframe>
+                       <iframe style="height: 450px;width: 100%;" src="${watchLink}" allowfullscreen></iframe>
                     </div>
                 `;
                 document.getElementById('output').innerText = generatedPost;
@@ -237,7 +237,7 @@ document.getElementById('generate').addEventListener('click', function() {
                           laws please let me know i will remove that movies.
                        </div>
                        Thank you for support
-                       <a href="/"> Our Website</a> <!-- Change "Mokoehbi" to your Website Name -->
+                       <a href="mokoehbi.blogspot.com"> Mokoehbi</a> <!-- Change "Mokoehbi" to your Website Name -->
                        <p></p>
                     </div>
                     <div class="border-video">
